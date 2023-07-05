@@ -1,0 +1,2 @@
+# CS50
+This repository contains my solutions for the CS50 labs and problem sets. CS50 is a popular introductory computer science course offered by Harvard University. In this repository, you will find my solutions for the CS50 labs and problem sets. Each lab or problem set will be found in their week and then in a separate folder containing the relevant code, files, and any additional resources necessary to complete the assignment. The solutions are written in various programming languages, depending on the requirements of each assignment.
