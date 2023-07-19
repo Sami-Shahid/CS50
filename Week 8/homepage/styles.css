@@ -1,0 +1,25 @@
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    text-align: center;
+}
+.header {
+    background-color: #000000;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+div {
+    width: 500px;
+    border: 15px solid red;
+    padding: 50px;
+    margin: 50px;
+  }
+
+  .center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid red;
+    padding: 30px;
+  }

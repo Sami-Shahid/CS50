@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the only food that cannot go bad?</h3>
+                <button id = "one">Honey</button>
+                <button id = "two">Dark chocolate</button>
+                <button id = "three">Peanut butter</button>
+                <button id = "four">Canned tuna</button>
+                <h3 id = "correct"></h3>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Which Country Produces The Most Coffee In The World?</h3>
+                <!-- TODO: Add free response question here -->
+                <form onsubmit="return greet(event);">
+                <input autocomplete = "off" id = "inp" type = "text"></input>
+                <button type = "submit">Submit</button>
+                </form>
+                <h3 id = "correct2"></h3>
+
+            </div>
+            <script>
+                // TODO: Add code to check answers to questions
+
+
+                document.querySelector('#one').addEventListener('click', function() {
+                    document.querySelector('#one').style.backgroundColor = 'green';
+                    word("Correct");
+                });
+
+                document.querySelector('#two').addEventListener('click', function() {
+                    makeRed('#two');
+                });
+
+                document.querySelector('#three').addEventListener('click', function() {
+                    makeRed('#three');
+                });
+
+                document.querySelector('#four').addEventListener('click', function() {
+                    makeRed('#four');
+                });
+                function makeRed(place){
+                    document.querySelector(place).style.backgroundColor = 'red';
+                    word("Incorrect");
+                    return;
+                }
+                function word(text){
+                    if (document.querySelector('#correct').innerHTML == ''){
+                        document.querySelector('#correct').innerHTML = text;
+                    }
+                    return;
+                }
+                function greet(event){
+                    event.preventDefault()
+                    if (document.querySelector('#correct2').innerHTML == ""){
+                        let inpu = document.querySelector('#inp').value;
+                        if (inpu == "Brazil"){
+                            document.querySelector('#inp').style.backgroundColor = 'green';
+                            document.querySelector('#correct2').innerHTML = "Correct";
+                        }else if (inpu != "Brazil"){
+                            document.querySelector('#inp').style.backgroundColor = 'red';
+                            document.querySelector('#correct2').innerHTML = "Incorrect";
+                        }
+                    }
+                    return false;
+                }
+
+
+
+
+            </script>
+        </div>
+
+    </body>
+</html>
