@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Transacted</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for i in hist %}
+        <tr>
+          <td>{{i["symbol"]}}</td>
+          <td>{{i["shares"]}}</td>
+          <td>${{i["price"]}}</td>
+          <td>{{i["type"]}}</td>
+          <td>{{i["date"]}}</td>
+
+      </tr>
+      {% endfor %}
+
+    </tr>
+ </tbody>
+</table>
+
+
+
+
+
+{% endblock %}

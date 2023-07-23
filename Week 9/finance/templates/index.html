@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for i in portfolio.keys() %}
+        <tr>
+          <td>{{i}}</td>
+          <td>{{portfolio[i][0]}}</td>
+          <td>${{"{:,.2f}".format(portfolio[i][1])}}</td>
+          <td>${{"{:,.2f}".format(portfolio[i][1] * portfolio[i][0])}}</td>
+
+      </tr>
+      {% endfor %}
+      <tr>
+        <td></td>
+        <td></td>
+        <td>Cash</td>
+        <td>${{"{:,.2f}".format(cash)}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Total</td>
+        <td>${{"{:,.2f}".format(cash+sum)}}</td>
+    </tr>
+ </tbody>
+</table>
+
+
+
+
+
+{% endblock %}
